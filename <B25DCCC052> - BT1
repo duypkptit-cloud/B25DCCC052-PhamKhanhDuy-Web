@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Trang giới thiệu cá nhân</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+    color: #222;
+    transition: background-color 0.4s ease;
+  }
+  header {
+    background: #2c3e50;
+    color: white;
+    padding: 24px;
+    text-align: center;
+  }
+  header h1 { margin: 0 0 8px 0; }
+  nav {
+    background: #34495e;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 12px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  nav a:hover { text-decoration: underline; }
+  main {
+    max-width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  #greeting {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  button:hover { background: #c0392b; }
+  footer {
+    text-align: center;
+    padding: 16px;
+    color: #777;
+    font-size: 0.9em;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Phạm Khánh Duy</h1>
+  <p>Sinh viên ngành Công nghệ thông tin</p>
+</header>
+
+<nav>
+  <a href="#">Trang chủ</a>
+  <a href="#">Giới thiệu</a>
+  <a href="#">Liên hệ</a>
+</nav>
+
+<main>
+  <p id="greeting">Xin chào!</p>
+  <p>Chào mừng bạn đến với trang giới thiệu cá nhân của tôi. Đây là nơi tôi chia sẻ về bản thân, sở thích và các dự án đang thực hiện.</p>
+  <button id="btnDoiMau">Đổi màu nền</button>
+</main>
+
+<footer>
+  &copy; 2026 - Trang cá nhân demo
+</footer>
+
+<script>
+  // Lời chào theo buổi trong ngày
+  const greetingEl = document.getElementById('greeting');
+  const now = new Date();
+  const gio = now.getHours();
+  let loiChao;
+  if (gio < 12) {
+    loiChao = "Chào buổi sáng!";
+  } else if (gio < 18) {
+    loiChao = "Chào buổi chiều!";
+  } else {
+    loiChao = "Chào buổi tối!";
+  }
+  greetingEl.innerText = loiChao;
+
+  // Đổi màu nền khi nhấn nút
+  const mauNen = ["#f4f6f8", "#dff0d8", "#fcf8e3", "#f2dede", "#d9edf7"];
+  let index = 0;
+  const btn = document.getElementById('btnDoiMau');
+  btn.addEventListener('click', function() {
+    index = (index + 1) % mauNen.length;
+    document.body.style.backgroundColor = mauNen[index];
+  });
+</script>
+
+</body>
+</html>
