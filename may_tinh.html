@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>May tinh don gian</title>
+<style>
+body {
+  background-color: #eeeeee;
+  font-family: Arial;
+}
+
+.man-hinh {
+  width: 220px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 30px;
+  text-align: right;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.khung {
+  width: 260px;
+  margin: 0 auto;
+}
+
+button {
+  width: 55px;
+  height: 55px;
+  font-size: 20px;
+  margin: 3px;
+}
+
+#btn-clear {
+  background-color: red;
+  color: white;
+  width: 240px;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center">MAY TINH</h2>
+
+<div class="khung">
+  <div class="man-hinh" id="manhinh">0</div>
+
+  <button class="so">7</button>
+  <button class="so">8</button>
+  <button class="so">9</button>
+  <button class="phep">/</button>
+  <br>
+
+  <button class="so">4</button>
+  <button class="so">5</button>
+  <button class="so">6</button>
+  <button class="phep">*</button>
+  <br>
+
+  <button class="so">1</button>
+  <button class="so">2</button>
+  <button class="so">3</button>
+  <button class="phep">-</button>
+  <br>
+
+  <button class="so">0</button>
+  <button class="phep">+</button>
+  <button id="btn-bang">=</button>
+  <br>
+
+  <button id="btn-clear">Clear</button>
+</div>
+
+<script>
+var manhinh = document.getElementById("manhinh");
+
+// lay tat ca nut so
+var nutSo = document.querySelectorAll(".so");
+for (var i = 0; i < nutSo.length; i++) {
+  nutSo[i].addEventListener("click", function() {
+    if (manhinh.innerText == "0") {
+      manhinh.innerText = this.innerText;
+    } else {
+      manhinh.innerText = manhinh.innerText + this.innerText;
+    }
+  });
+}
+
+// lay tat ca nut phep tinh
+var nutPhep = document.querySelectorAll(".phep");
+for (var i = 0; i < nutPhep.length; i++) {
+  nutPhep[i].addEventListener("click", function() {
+    manhinh.innerText = manhinh.innerText + this.innerText;
+  });
+}
+
+// nut clear
+var nutClear = document.getElementById("btn-clear");
+nutClear.addEventListener("click", function() {
+  manhinh.innerText = "0";
+});
+
+// nut bang
+var nutBang = document.getElementById("btn-bang");
+nutBang.addEventListener("click", function() {
+  var ketqua = eval(manhinh.innerText);
+  manhinh.innerText = ketqua;
+});
+</script>
+
+</body>
+</html>
