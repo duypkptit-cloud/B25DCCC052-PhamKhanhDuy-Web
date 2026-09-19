@@ -1,0 +1,42 @@
+body {
+  font-family: Arial;
+  margin: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+td, th {
+  border: 1px solid #333;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #eee;
+}
+
+button {
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+#btnDatHang {
+  background-color: #2b7a0b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+#ketQua {
+  font-style: italic;
+}
