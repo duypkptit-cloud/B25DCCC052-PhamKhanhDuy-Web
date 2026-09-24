@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khanh Duy — Frontend Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <div class="logo">khanh<span>duy</span>.dev</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Giới thiệu</a></li>
+      <li><a href="#skills">Kỹ năng</a></li>
+      <li><a href="#projects">Dự án</a></li>
+      <li><a href="#contact">Liên hệ</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="themeToggle" title="Đổi giao diện sáng/tối">🌙</button>
+      <button class="hamburger" id="hamburger" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Xin chào, mình là</p>
+    <h1>Khanh Duy — Frontend Developer</h1>
+    <p>Mình xây dựng giao diện web nhanh, gọn gàng và dễ dùng.</p>
+    <div class="cta-row">
+      <a href="#projects" class="btn btn-primary">Xem dự án</a>
+      <a href="#contact" class="btn btn-ghost">Liên hệ với mình</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap reveal">
+    <h2>Về mình</h2>
+    <p class="section-sub">Mình thích biến những ý tưởng phức tạp thành giao diện đơn giản, mượt mà. Ngoài code, mình dành thời gian đọc về thiết kế hệ thống và viết blog kỹ thuật.</p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap reveal">
+    <h2>Kỹ năng</h2>
+    <p class="section-sub">Những công nghệ mình dùng hằng ngày.</p>
+    <div class="skills-grid">
+      <div class="skill-card"><h3>HTML &amp; CSS</h3><p>Semantic markup, Flexbox, Grid, responsive design.</p></div>
+      <div class="skill-card"><h3>JavaScript</h3><p>ES6+, DOM, xử lý sự kiện, fetch API.</p></div>
+      <div class="skill-card"><h3>React</h3><p>Component, hooks, quản lý state.</p></div>
+      <div class="skill-card"><h3>UI/UX</h3><p>Wireframe, prototype, thiết kế trải nghiệm.</p></div>
+      <div class="skill-card"><h3>Git &amp; GitHub</h3><p>Quản lý phiên bản, làm việc nhóm.</p></div>
+      <div class="skill-card"><h3>Node.js</h3><p>API cơ bản, xử lý dữ liệu backend nhẹ.</p></div>
+      <div class="skill-card"><h3>Tối ưu hiệu năng</h3><p>Lazy load, tối ưu hình ảnh, Lighthouse.</p></div>
+      <div class="skill-card"><h3>Accessibility</h3><p>ARIA, điều hướng bàn phím, độ tương phản.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap reveal">
+    <h2>Dự án</h2>
+    <p class="section-sub">Một vài dự án gần đây. Lọc theo từ khóa hoặc thẻ.</p>
+    <div class="filter-bar">
+      <input type="text" id="searchInput" placeholder="Tìm dự án theo tên hoặc mô tả...">
+      <button class="tag-btn active" data-tag="all">Tất cả</button>
+      <button class="tag-btn" data-tag="react">React</button>
+      <button class="tag-btn" data-tag="ui">UI/UX</button>
+      <button class="tag-btn" data-tag="api">API</button>
+    </div>
+    <div class="projects-grid" id="projectsGrid">
+      <div class="project-card" data-tags="react ui" data-name="ứng dụng quản lý công việc">
+        <h3>Ứng dụng quản lý công việc</h3>
+        <p>App todo kéo-thả xây bằng React, lưu dữ liệu local, giao diện tối giản.</p>
+        <div class="tags"><span class="tag">React</span><span class="tag">UI/UX</span></div>
+      </div>
+      <div class="project-card" data-tags="ui" data-name="trang portfolio nhiếp ảnh">
+        <h3>Trang portfolio nhiếp ảnh</h3>
+        <p>Landing page giới thiệu ảnh, hiệu ứng cuộn mượt, tối ưu tải ảnh nhanh.</p>
+        <div class="tags"><span class="tag">UI/UX</span></div>
+      </div>
+      <div class="project-card" data-tags="api react" data-name="bảng dự báo thời tiết">
+        <h3>Bảng dự báo thời tiết</h3>
+        <p>Ứng dụng gọi API thời tiết công khai, hiển thị biểu đồ theo giờ.</p>
+        <div class="tags"><span class="tag">React</span><span class="tag">API</span></div>
+      </div>
+      <div class="project-card" data-tags="api" data-name="công cụ rút gọn liên kết">
+        <h3>Công cụ rút gọn liên kết</h3>
+        <p>Dịch vụ tạo link ngắn với thống kê lượt click cơ bản.</p>
+        <div class="tags"><span class="tag">API</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap reveal">
+    <h2>Liên hệ</h2>
+    <p class="section-sub">Có dự án muốn hợp tác? Gửi mình vài dòng nhé.</p>
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="field">
+        <label for="name">Họ tên</label>
+        <input type="text" id="name" name="name">
+        <div class="error-msg" id="nameError"></div>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+        <div class="error-msg" id="emailError"></div>
+      </div>
+      <div class="field">
+        <label for="message">Lời nhắn</label>
+        <textarea id="message" name="message" maxlength="300"></textarea>
+        <div class="char-count"><span id="charCount">0</span>/300</div>
+        <div class="error-msg" id="messageError"></div>
+      </div>
+      <button type="submit" class="btn btn-primary">Gửi liên hệ</button>
+      <div class="form-status" id="formStatus"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-row">
+    <p>© <span id="year"></span> Khanh Duy. Được tạo bằng HTML, CSS &amp; JavaScript.</p>
+    <ul class="footer-links">
+      <li><a href="#">GitHub</a></li>
+      <li><a href="#">LinkedIn</a></li>
+      <li><a href="#">Email</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
